@@ -10,7 +10,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #DED7D8;
+    background-color: #FCC8D1;
     overflow: hidden;
     z-index: 2;
 }
@@ -47,7 +47,7 @@ nav a:hover{
 
 body {
     margin:0;
-    background: #f1f1f1;
+    background: #FFE6E6;
     margin-top: 50px;
 }
 section{
