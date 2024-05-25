@@ -9,7 +9,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #DED7D8;
+    background-color: #FFDDD2;
     overflow: hidden;
     z-index: 2;
 }
@@ -23,7 +23,7 @@ nav a{
 }
 
 nav a:hover{
-    background-color: #beb8b8;
+    background-color: #FFBFA9;
 }
 
 .linkjes{
@@ -41,7 +41,7 @@ nav a:hover{
 
 .dropdown-content {
     color: black;
-    background-color: #DED7D8;
+    background-color: #FFDDD2;
     display: none;
     position: fixed;
     width: 100px;
@@ -52,7 +52,7 @@ nav a:hover{
 
 
 body {
-    background: #f1f1f1;
+    background: #FEF2F4;
     margin: 0;
 }
 section{
@@ -142,7 +142,7 @@ h2{
     left: 440px;
     transform: translate(50px, 50px);
     -ms-transform: translate(50px, 50px);
-    background-color: black;
+    background-color: #E1ACAC;
     color: white;
     font-size: 20px;
     padding: 25px 80px;
@@ -152,11 +152,11 @@ h2{
 }
 
 .container .btn:hover {
-    background-color: grey;
+    background-color: #CA8787;
 }
 footer{
     font-family: Verdana, sans-serif;
-    background-color: #DED7D8;
+    background-color: #FFDDD2;
     color: black;
     padding: 20px;
     margin-top: 20px;
@@ -185,7 +185,7 @@ i{
 button{
     border-radius: 10px;
     border-style: hidden;
-    background-color: black;
+    background-color: #E1ACAC;
     padding: 20px 60px;
 }
 button a{
@@ -203,7 +203,7 @@ button a{
 .behandelingenbox{
     display: flex;
     text-align: center;
-    background: #E3F0F7;
+    background: #FFE6E6;
     padding: 50px;
     margin:0;
 }
@@ -226,7 +226,11 @@ button a{
     font-family: "Arial Rounded MT Bold";
 }
 
+article{
+    background: #FFE6E6;
+    margin-top: 20px;
 
+}
 h6{
     text-align: center;
     font-size: 20px;
@@ -234,9 +238,9 @@ h6{
     padding-top: 50px;
 }
 
-article{
-    background: #E3F0F7;
-    margin-top: 20px;
-
+.afspraak{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 

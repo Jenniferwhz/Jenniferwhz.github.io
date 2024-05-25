@@ -10,7 +10,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #DED7D8;
+    background-color: #FFDDD2;
     overflow: hidden;
     z-index: 2;
 }
@@ -24,7 +24,7 @@ nav a{
 }
 
 nav a:hover{
-    background-color: #beb8b8;
+    background-color: #FFBFA9;
 }
 
 .linkjes{
@@ -36,7 +36,7 @@ nav a:hover{
 
 .dropdown-content {
     color: black;
-    background-color: #DED7D8;
+    background-color: #FFDDD2;
     display: none;
     position: fixed;
     width: 100px;
@@ -44,10 +44,11 @@ nav a:hover{
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/*menu afgelopen*/
 
 body {
     margin:0;
-    background: #f1f1f1;
+    background: #FEF2F4 ;
     margin-top: 50px;
 }
 section{
@@ -57,6 +58,7 @@ section{
 
 }
 
+/*grote letters*/
 h1{
     font-family: Verdana,sans-serif;;
     font-weight: bolder;
@@ -87,10 +89,10 @@ img{
     margin-right: auto;
 }
 
-
+/*footer*/
 footer{
     font-family: Verdana, sans-serif;
-    background-color: #DED7D8;
+    background-color: #FFDDD2;
     color: black;
     padding: 20px;
     margin-top: 40px;
@@ -140,7 +142,7 @@ i{
 button{
     border-radius: 10px;
     border-style: hidden;
-    background-color: black;
+    background-color: #E1ACAC;
     padding: 20px 60px;
     color: white;
 }
@@ -181,14 +183,14 @@ table {
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #F0EDD4;
     text-align: left;
     padding: 8px;
     width: 50%;
 }
 
 tr:nth-child(even) {
-    background-color: #DED7D8;
+    background-color: #ECCDB4;
 }
 
 .knop{
