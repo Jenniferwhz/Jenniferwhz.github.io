@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Prijzen</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="balk">
+    <nav>
+        <a class="logo" href="index.html">
+            <img src="sources/Logo.jpg" alt="logo" height="60" width="119"/>
+        </a>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="Prijzen.html">Prijzen</a>
+            <div class="dropdown-content">
+                <a class="linkjes" href="Prijzen.html#Kop 1">Dames</a>
+                <a class="linkjes" href="Prijzen.html#Kop 2">Heren</a>
+                <a class="linkjes" href="Prijzen.html#Kop 3">Kinderen</a>
+            </div>
+        </div>
+        <a href="Producten.html">Producten</a>
+    </nav>
+</div>
+
+<div class="slideshow-container">
+    <div class="Slide">
+        <img src="sources/img1.png" style="width:100%">
+    </div>
+    <div class="Slide">
+        <img src="sources/img2.png" style="width:100%">
+    </div>
+    <div class="Slide">
+        <img src="sources/img3.png" style="width:100%">
+    </div>
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+
+<button class="afspraak" > <a href="Afspraak.html">Afspraak maken </a> </button>
+
+
+<section>
+    <a id="Kop 1"><h2>Dames</h2></a>
+    <p>
+    <table>
+        <tr>
+            <td>Wassen & knippen</td>
+            <td>€35,00</td>
+        </tr>
+        <tr>
+            <td>Wassen, knippen & drogen kort</td>
+            <td>€38,00</td>
+        </tr>
+        <tr>
+            <td>Wassen, knippen & drogen lang</td>
+            <td>€40,00</td>
+        </tr>
+    </table>
+    </p>
+</section>
+<section>
+    <a id="Kop 2"><h2>Heren</h2></a>
+    <p>
+    <table>
+        <tr>
+            <td>Wassen & knippen</td>
+            <td>€35,00</td>
+        </tr>
+        <tr>
+            <td>Wassen & tondeuse</td>
+            <td>€25,50</td>
+        </tr>
+        <tr>
+            <td>Knippen baard</td>
+            <td>€15,00</td>
+        </tr>
+    </table>
+    </p>
+
+</section>
+<section>
+    <a id="Kop 3"><h2>Kinderen</h2></a>
+    <p>
+    <table>
+        <tr>
+            <td>knippen 0 t/m 3 jaar</td>
+            <td>€23,00</td>
+        </tr>
+        <tr>
+            <td>Wassen & knippen 4 t/m 12 jaar</td>
+            <td>€25,50</td>
+        </tr>
+        <tr>
+            <td>Wassen & knippen 13 t/m 17</td>
+            <td>€28,50</td>
+        </tr>
+        <tr>
+            <td>Wassen, knippen & drogen 13 t/m 17</td>
+            <td>€30,00</td>
+        </tr>
+    </table>
+    </p>
+</section>
+
+<footer>
+    © kapper
+    <div class="footerbox">
+        <div class="footer-heading">
+            <h4>ADRES</h4>
+            Rebeca Wilson <br> Hoofdstraat 1 <br> 6853 JV Arnhem
+        </div>
+        <div class="footer-heading">
+            <h4>CONTACT</h4>
+            <a href="Contact.html">contactgegevens</a>
+            E: Rebecawilson123@gmail.com
+            <br> T: (026)8567091 <br>
+            <a href="https://www.facebook.com/?locale=nl_NL">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div class="footer-heading">
+            <h4>AFSPRAAK MAKEN</h4>
+            <button type="button" > <a href="Afspraak.html">Afspraak maken </a> </button>
+
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    <!-- bron: W3 school www.w3schools.com/howto/howto_js_slideshow.asp-->
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("Slide");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+</script>
+</html>
