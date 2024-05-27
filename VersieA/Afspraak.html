@@ -25,28 +25,17 @@
     </nav>
 </div>
 
-<section id="Locatie">
-    <form>
-        <label for="locatie">Kies een locatie:</label>
-        <select name="locatie" id="locatie">
-            <option value="Arnhem">Arnhem</option>
-            <option value="Utrecht">Utrecht</option>
-            <option value="Amsterdam">Amsterdam</option>
-            <option value="Den Haag">Den Haag</option>
-        </select>
-        <br><br>
-    </form>
-    <button class="knop" onclick="DatumWeergeven()">Volgende</button>
-</section>
 
-<section id="Datum" style="display: none;">
-    <form id="datumForm">
-        <label for="datum">Kies een datum:</label>
-        <input type="date" name="datum" id="datum">
-        <br><br>
-    </form>
-    <button class="knop" onclick="LocatieWeergeven()">Terug</button>
-    <button class="knop" onclick="TijdWeergeven()">Volgende</button>
+
+<section id="Datum" >
+    <p>Kies de dag:</p>
+    <button class="knop2" onclick="DatumKiezen('Maandag')">Maandag</button>
+    <button class="knop2" onclick="DatumKiezen('Dinsdag')">Dinsdag</button>
+    <button class="knop2" onclick="DatumKiezen('Woensdag')">Woensdag</button>
+    <button class="knop2" onclick="DatumKiezen('Donderdag')">Donderdag</button>
+    <button class="knop2" onclick="DatumKiezen('Vrijdag')">Vrijdag</button>
+    <button class="knop2" onclick="DatumKiezen('Zaterdag')">Zaterdag</button>
+    <button class="knop2" onclick="DatumKiezen('Zondag')">Zondag</button>
 </section>
 
 <section id="Tijd" style="display: none;">
@@ -60,6 +49,21 @@
     <button class="knop" onclick="DatumWeergeven()">Terug</button>
 </section>
 
+<section id="Locatie"style="display: none;">
+    <form>
+        <label for="locatie">Kies een locatie:</label>
+        <select name="locatie" id="locatie">
+            <option value="Arnhem">Arnhem</option>
+            <option value="Utrecht">Utrecht</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Den Haag">Den Haag</option>
+        </select>
+        <br><br>
+    </form>
+    <button class="knop" onclick="TijdWeergeven()">Terug</button>
+    <button class="knop" onclick="BehandelingWeergeven()">Volgende</button>
+</section>
+
 <section id="Behandeling" style="display: none;">
     <form>
         <h2>Dames</h2>
@@ -67,7 +71,7 @@
         <label for="Wassen & knippen">Wassen & knippen	€35,00</label><br>
         <input type="radio" id="Wassen, knippen & drogen kort" name="behandeling" value="Dames Wassen, knippen & drogen kort">
         <label for="Wassen, knippen & drogen kort">Wassen, knippen & drogen kort	€38,00</label><br>
-        <input type="radio" id="Wassen, knippen & drogen lang" name="behandeling" value="DamesWassen, knippen & drogen lang">
+        <input type="radio" id="Wassen, knippen & drogen lang" name="behandeling" value="Dames Wassen, knippen & drogen lang">
         <label for="Wassen, knippen & drogen lang">Wassen, knippen & drogen lang	€40,00</label>
         <br/>
         <h2>Heren</h2>
@@ -88,7 +92,7 @@
         <input type="radio" id="Wassen, knippen & drogen 13 t/m 17" name="behandeling" value="Wassen, knippen & drogen 13 t/m 17">
         <label for="Wassen, knippen & drogen 13 t/m 17">Wassen, knippen & drogen 13 t/m 17	€30,00</label>
     </form>
-    <button class="knop" onclick="TijdWeergeven()">Terug</button>
+    <button class="knop" onclick="LocatieWeergeven()">Terug</button>
     <button class="knop" onclick="Behandelingkiezen()">Volgende</button>
 </section>
 
@@ -98,7 +102,7 @@
     <p id="DatumWeergeven"></p>
     <p id="TijdWeergeven"></p>
     <p id="BehandelingWeergeven"></p>
-    <button class="knop" onclick="TijdKiezen()">Terug</button>
+    <button class="knop" onclick="BehandelingWeergeven()">Terug</button>
     <button class="knop" onclick="bevestigen()">Bevestigen</button>
 </section>
 
@@ -136,18 +140,10 @@
 </body>
 </html>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        var yyyy = today.getFullYear();
-
-        var minDate = yyyy + '-' + mm + '-' + dd;
-        document.getElementById("datum").setAttribute("min", minDate);
-    });
-    function LocatieWeergeven() {
+        function LocatieWeergeven() {
         document.getElementById("Locatie").style.display = "block";
         document.getElementById("Datum").style.display = "none";
+        document.getElementById("Behandeling").style.display = "none"
     }
     function DatumWeergeven() {
         document.getElementById("Locatie").style.display = "none";
@@ -157,7 +153,14 @@
 
     function TijdWeergeven() {
         document.getElementById("Datum").style.display = "none";
-        document.getElementById("Behandeling").style.display = "none";
+        document.getElementById("Locatie").style.display = "none";
+        document.getElementById("Tijd").style.display = "block";
+    }
+
+    function DatumKiezen(GekozenDag) {
+        localStorage.setItem("GekozenDag", GekozenDag);
+        document.getElementById("Datum").style.display = "none";
+        document.getElementById("Bevestiging").style.display = "none";
         document.getElementById("Tijd").style.display = "block";
     }
 
@@ -165,7 +168,13 @@
         localStorage.setItem("GekozenTijd", GekozenTijd);
         document.getElementById("Tijd").style.display = "none";
         document.getElementById("Bevestiging").style.display = "none";
+        document.getElementById("Locatie").style.display = "block";
+    }
+
+    function BehandelingWeergeven() {
         document.getElementById("Behandeling").style.display = "block";
+        document.getElementById("Bevestiging").style.display = "none";
+        document.getElementById("Locatie").style.display = "none";
     }
 
     function Behandelingkiezen() {
@@ -175,12 +184,12 @@
 
     function Bevestiging() {
         var locatie = document.getElementById("locatie").value;
-        var datum = document.getElementById("datum").value;
+        var dag = localStorage.getItem("GekozenDag");
         var tijd = localStorage.getItem("GekozenTijd");
         var behandeling = document.querySelector('input[name="behandeling"]:checked').value;
 
         document.getElementById("LocatieWeergeven").innerText = "Locatie: " + locatie;
-        document.getElementById("DatumWeergeven").innerText = "Datum: " + datum;
+        document.getElementById("DatumWeergeven").innerText = "Dag: " + dag;
         document.getElementById("TijdWeergeven").innerText = "Tijd: " + tijd;
         document.getElementById("BehandelingWeergeven").innerText = "Behandeling: " + behandeling;
 
