@@ -54,7 +54,7 @@ body {
 section{
     background-color: #ffffff;
     padding: 15px;
-    margin:30px 15px 5px;
+    margin:80px 15px 5px;
 
 }
 
@@ -196,9 +196,9 @@ tr:nth-child(even) {
 .knop{
     border-radius: 10px;
     border-style: hidden;
-    background-color: #DED7D8;;
+    background-color: #E1ACAC;
+    color: white;
     padding: 15px 40px;
-    color:black;
     font-size: 15px;
     margin-right: 5px;
     margin-bottom:7px;
