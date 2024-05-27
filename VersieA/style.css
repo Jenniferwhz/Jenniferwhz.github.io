@@ -23,6 +23,10 @@ nav a{
     display:inline-block;
 }
 
+.versie{
+    padding-left: 250px;
+}
+
 nav a:hover{
     background-color: #beb8b8;
 }
