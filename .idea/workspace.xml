@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50a8b2d4-988a-44e4-b213-25354bae3a9f" name="Changes" comment="versieb map aangemaakt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersieA/Home-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/VersieA/Home-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersieA/Producten-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/VersieA/Producten-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersieA/prijzen-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/VersieA/prijzen-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersieA/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/VersieA/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="50a8b2d4-988a-44e4-b213-25354bae3a9f" name="Changes" comment="lettertype veranderd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716660010487</updated>
       <workItem from="1716660011705" duration="3485000" />
-      <workItem from="1716813275847" duration="4065000" />
+      <workItem from="1716813275847" duration="4460000" />
     </task>
     <task id="LOCAL-00001" summary="kleuren aangepast">
       <option name="closed" value="true" />
@@ -82,7 +76,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716817221157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lettertype veranderd">
+      <option name="closed" value="true" />
+      <created>1716819768523</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716819768523</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lettertype veranderd">
+      <option name="closed" value="true" />
+      <created>1716820013129</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716820013130</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +101,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kleuren aangepast" />
     <MESSAGE value="versieb map aangemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="versieb map aangemaakt" />
+    <MESSAGE value="lettertype veranderd" />
+    <option name="LAST_COMMIT_MESSAGE" value="lettertype veranderd" />
   </component>
 </project>
