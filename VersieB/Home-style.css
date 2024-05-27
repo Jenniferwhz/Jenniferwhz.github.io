@@ -1,0 +1,246 @@
+.logo {
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+nav {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFDDD2;
+    overflow: hidden;
+    z-index: 2;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, sans-serif;
+    padding: 20px 15px;
+    display:inline-block;
+}
+
+nav a:hover{
+    background-color: #FFBFA9;
+}
+
+.linkjes{
+    padding: 15px;
+}
+
+.knop{
+    float:right;
+    background-color: black;
+    color:white;
+}
+.dropdown, .dropdown-content a{
+    display: inline-block;
+}
+
+.dropdown-content {
+    color: black;
+    background-color: #FFDDD2;
+    display: none;
+    position: fixed;
+    width: 100px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+body {
+    background: #FEF2F4;
+    margin: 0;
+}
+section{
+    background-color: #ffffff;
+    padding: 15px;
+    margin :30px;
+}
+
+p{
+    font-family: Verdana, sans-serif;
+    margin: 5px 15px 5px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2{
+    font-family: Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 22px;
+    margin: 0 15px 0;
+}
+.hr-lines{
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    padding-top: 0px;
+    font-family: Arial;
+    font-weight: lighter;
+    font-size: 25px;
+    padding-bottom:10px;
+}
+
+.hr-lines:before{
+    content:" ";
+    height: 2px;
+    width: 130px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.hr-lines:after{
+    content:" ";
+    height: 2px;
+    width: 130px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.tekst{
+    text-align: center;
+    padding: 0 150px 50px;
+    font-size: 18px;
+    font-family: "Arial Rounded MT Bold", serif;
+}
+
+.container {
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.centered{
+    position: absolute;
+    top: 490px;
+    transform: translate(50px, 50px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+    position: absolute;
+    top: 590px;
+    left: 440px;
+    transform: translate(50px, 50px);
+    -ms-transform: translate(50px, 50px);
+    background-color: #E1ACAC;
+    color: white;
+    font-size: 20px;
+    padding: 25px 80px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container .btn:hover {
+    background-color: #CA8787;
+}
+footer{
+    font-family: Verdana, sans-serif;
+    background-color: #FFDDD2;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footerbox{
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+i{
+    color: black;
+    float: right;
+    padding: 5px;
+}
+
+button{
+    border-radius: 10px;
+    border-style: hidden;
+    background-color: #E1ACAC;
+    padding: 20px 60px;
+}
+button a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: monospace, sans-serif;
+}
+
+.container a{
+    text-decoration: none;
+    color: white;
+}
+
+.behandelingenbox{
+    display: flex;
+    text-align: center;
+    background: #FFE6E6;
+    padding: 50px;
+    margin:0;
+}
+
+.behandeling-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    float: left;
+    width: 320px;
+    margin-top: 0;
+    padding-left: 0;
+    font-family: Verdana;
+
+}
+.behandeling-text{
+    display: block;
+    flex-direction: column;
+    margin-right: 50px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+article{
+    background: #FFE6E6;
+    margin-top: 20px;
+
+}
+h6{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-top: 50px;
+}
+
+.afspraak{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
