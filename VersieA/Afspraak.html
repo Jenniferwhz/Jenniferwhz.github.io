@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Afspraak maken</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="balk">
+    <nav>
+        <a class="logo" href="index.html">
+            <img src="sources/Logo.jpg" alt="logo" height="60" width="119"/>
+        </a>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="Prijzen.html">Prijzen</a>
+            <div class="dropdown-content">
+                <a class="linkjes" href="Prijzen.html#Kop 1">Dames</a>
+                <a class="linkjes" href="Prijzen.html#Kop 2">Heren</a>
+                <a class="linkjes" href="Prijzen.html#Kop 3">Kinderen</a>
+            </div>
+        </div>
+        <a href="Producten.html">Producten</a>
+
+    </nav>
+</div>
+
+<section id="Locatie">
+    <form>
+        <label for="locatie">Kies een locatie:</label>
+        <select name="locatie" id="locatie">
+            <option value="Arnhem">Arnhem</option>
+            <option value="Utrecht">Utrecht</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Den Haag">Den Haag</option>
+        </select>
+        <br><br>
+    </form>
+    <button class="knop" onclick="DatumWeergeven()">Volgende</button>
+</section>
+
+<section id="Datum" style="display: none;">
+    <form id="datumForm">
+        <label for="datum">Kies een datum:</label>
+        <input type="date" name="datum" id="datum">
+        <br><br>
+    </form>
+    <button class="knop" onclick="LocatieWeergeven()">Terug</button>
+    <button class="knop" onclick="TijdWeergeven()">Volgende</button>
+</section>
+
+<section id="Tijd" style="display: none;">
+    <p>Kies een van de beschikbare tijden:</p>
+    <button class="knop2" onclick="TijdKiezen('9:00')">9:00</button>
+    <button class="knop2" onclick="TijdKiezen('10:15')">10:15</button>
+    <button class="knop2" onclick="TijdKiezen('13:30')">13:30</button>
+    <button class="knop2" onclick="TijdKiezen('15:15')">15:15</button>
+    <button class="knop2" onclick="TijdKiezen('16:45')">16:45</button>
+    <br/>
+    <button class="knop" onclick="DatumWeergeven()">Terug</button>
+</section>
+
+<section id="Behandeling" style="display: none;">
+    <form>
+        <h2>Dames</h2>
+        <input type="radio" id="Wassen & knippen" name="behandeling" value=" Dames Wassen & knippen">
+        <label for="Wassen & knippen">Wassen & knippen	€35,00</label><br>
+        <input type="radio" id="Wassen, knippen & drogen kort" name="behandeling" value="Dames Wassen, knippen & drogen kort">
+        <label for="Wassen, knippen & drogen kort">Wassen, knippen & drogen kort	€38,00</label><br>
+        <input type="radio" id="Wassen, knippen & drogen lang" name="behandeling" value="DamesWassen, knippen & drogen lang">
+        <label for="Wassen, knippen & drogen lang">Wassen, knippen & drogen lang	€40,00</label>
+        <br/>
+        <h2>Heren</h2>
+        <input type="radio" id="Wassen & knippen2" name="behandeling" value=" Heren Wassen & knippen">
+        <label for="Wassen & knippen2">Wassen & knippen	€35,00</label><br>
+        <input type="radio" id="Wassen & tondeuse" name="behandeling" value="Heren Wassen & tondeuse">
+        <label for="Wassen & tondeuse">Wassen & tondeuse	€25,50</label><br>
+        <input type="radio" id="Knippen baard" name="behandeling" value="Heren Knippen baard">
+        <label for="Knippen baard">Knippen baard	€15,00</label>
+        <br/>
+        <h2>Kinderen</h2>
+        <input type="radio" id="knippen 0 t/m 3 jaar" name="behandeling" value="Knippen 0 t/m 3 jaar">
+        <label for="knippen 0 t/m 3 jaar">knippen 0 t/m 3 jaar	€23,00</label><br>
+        <input type="radio" id="Wassen & knippen 4 t/m 12 jaar" name="behandeling" value="Wassen & knippen 4 t/m 12 jaar">
+        <label for="Wassen & knippen 4 t/m 12 jaar">Wassen & knippen 4 t/m 12 jaar	€25,50</label><br>
+        <input type="radio" id="Wassen & knippen 13 t/m 17" name="behandeling" value="Wassen & knippen 13 t/m 17">
+        <label for="Wassen & knippen 13 t/m 17">Wassen & knippen 13 t/m 17	€28,50</label><br>
+        <input type="radio" id="Wassen, knippen & drogen 13 t/m 17" name="behandeling" value="Wassen, knippen & drogen 13 t/m 17">
+        <label for="Wassen, knippen & drogen 13 t/m 17">Wassen, knippen & drogen 13 t/m 17	€30,00</label>
+    </form>
+    <button class="knop" onclick="TijdWeergeven()">Terug</button>
+    <button class="knop" onclick="Behandelingkiezen()">Volgende</button>
+</section>
+
+<section id="Bevestiging" style="display: none;">
+    <p>Je afspraak staat voor:</p>
+    <p id="LocatieWeergeven"></p>
+    <p id="DatumWeergeven"></p>
+    <p id="TijdWeergeven"></p>
+    <p id="BehandelingWeergeven"></p>
+    <button class="knop" onclick="TijdKiezen()">Terug</button>
+    <button class="knop" onclick="bevestigen()">Bevestigen</button>
+</section>
+
+<section id="Ingepland" style="display: none;">
+    <p>Je afspraak staat ingepland.</p>
+    <p>Tot dan!</p>
+</section>
+
+<footer>
+    © kapper
+    <div class="footerbox">
+        <div class="footer-heading">
+            <h4>ADRES</h4>
+            Rebeca Wilson <br> Hoofdstraat 1 <br> 6853 JV Arnhem
+        </div>
+        <div class="footer-heading">
+            <h4>CONTACT</h4>
+            <a href="Contact.html">contactgegevens</a>
+            E: Rebecawilson123@gmail.com
+            <br> T: (026)8567091 <br>
+            <a href="https://www.facebook.com/?locale=nl_NL">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div class="footer-heading">
+            <h4>AFSPRAAK MAKEN</h4>
+            <button type="button" > <a href="Afspraak.html">Afspraak maken </a> </button>
+
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        var minDate = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("datum").setAttribute("min", minDate);
+    });
+    function LocatieWeergeven() {
+        document.getElementById("Locatie").style.display = "block";
+        document.getElementById("Datum").style.display = "none";
+    }
+    function DatumWeergeven() {
+        document.getElementById("Locatie").style.display = "none";
+        document.getElementById("Tijd").style.display = "none";
+        document.getElementById("Datum").style.display = "block";
+    }
+
+    function TijdWeergeven() {
+        document.getElementById("Datum").style.display = "none";
+        document.getElementById("Behandeling").style.display = "none";
+        document.getElementById("Tijd").style.display = "block";
+    }
+
+    function TijdKiezen(GekozenTijd) {
+        localStorage.setItem("GekozenTijd", GekozenTijd);
+        document.getElementById("Tijd").style.display = "none";
+        document.getElementById("Bevestiging").style.display = "none";
+        document.getElementById("Behandeling").style.display = "block";
+    }
+
+    function Behandelingkiezen() {
+        document.getElementById("Behandeling").style.display = "none";
+        Bevestiging();
+    }
+
+    function Bevestiging() {
+        var locatie = document.getElementById("locatie").value;
+        var datum = document.getElementById("datum").value;
+        var tijd = localStorage.getItem("GekozenTijd");
+        var behandeling = document.querySelector('input[name="behandeling"]:checked').value;
+
+        document.getElementById("LocatieWeergeven").innerText = "Locatie: " + locatie;
+        document.getElementById("DatumWeergeven").innerText = "Datum: " + datum;
+        document.getElementById("TijdWeergeven").innerText = "Tijd: " + tijd;
+        document.getElementById("BehandelingWeergeven").innerText = "Behandeling: " + behandeling;
+
+        document.getElementById("Tijd").style.display = "none";
+        document.getElementById("Bevestiging").style.display = "block";
+    }
+    function bevestigen() {
+        document.getElementById("Bevestiging").style.display = "none";
+        document.getElementById("Ingepland").style.display = "block";
+    }
+</script>
